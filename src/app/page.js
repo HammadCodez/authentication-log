@@ -23,9 +23,12 @@ const Home = () => {
 
   const logout = async () => {
     try {
-      const res = await axios.get(`${NEXT_PUBLIC_API_URL}/api/v1/user/logout`, {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/logout`,
+        {
+          withCredentials: true,
+        }
+      );
       toast.success(res.data.message);
       setUser(null);
       setIsAuthenticated(false);

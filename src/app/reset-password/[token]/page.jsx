@@ -66,7 +66,7 @@ const ResetPassword = () => {
 
     try {
       const res = await axios.put(
-        `${NEXT_PUBLIC_API_URL}/api/v1/user/password/reset/${token}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/password/reset/${token}`,
         formData,
         {
           withCredentials: true,

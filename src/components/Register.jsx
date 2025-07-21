@@ -28,7 +28,7 @@ const Register = () => {
   const handleRegister = async (data) => {
     try {
       const res = await axios.post(
-        `${NEXT_PUBLIC_API_URL}/api/v1/user/register`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/register`,
         { ...data },
         {
           withCredentials: true,

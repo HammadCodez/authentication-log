@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
     try {
       const res = await axios.post(
-        `${NEXT_PUBLIC_API_URL}/api/v1/user/password/forgot`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/password/forgot`,
         { email },
         {
           withCredentials: true,

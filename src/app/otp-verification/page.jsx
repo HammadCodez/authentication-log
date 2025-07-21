@@ -51,7 +51,7 @@ const OtpVerification = () => {
 
     try {
       const response = await axios.post(
-        `${NEXT_PUBLIC_API_URL}/api/v1/user/otp-verification`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/otp-verification`,
         {
           email,
           otp: enteredOtp,

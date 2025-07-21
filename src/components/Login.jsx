@@ -21,7 +21,7 @@ const Login = () => {
   const handleLogin = async (data) => {
     try {
       const res = await axios.post(
-        `${NEXT_PUBLIC_API_URL}/api/v1/user/login`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/login`,
         data,
         {
           withCredentials: true,
