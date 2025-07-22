@@ -180,7 +180,7 @@ export const forgotPassword = catchAsyncError(async (req, res, next) => {
   try {
     sendEmail({
       email: user.email,
-      subject: "MERN AUTHENTICATION APP RESET PASSWORD",
+      subject: "Next.js Custom Auth APP RESET PASSWORD",
       message,
     });
 
